@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 private const val TAG : String = "MainActivity"
 private const val MESSAGE_KEY : String = "messageTextView"
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CustomDialogFragment.OnFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,5 +30,9 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(MESSAGE_KEY, messageTextView.text.toString())
+    }
+
+    override fun onFragmentInteraction(txt: String) {
+        messageTextView.text = txt
     }
 }
