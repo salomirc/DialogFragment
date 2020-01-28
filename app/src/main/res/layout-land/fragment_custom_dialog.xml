@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".fragments.CustomDialogFragment">
 
 
@@ -12,9 +12,9 @@
         android:id="@+id/titleTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="@string/compose_dial_fragment_title"
         android:textSize="24sp"
@@ -33,7 +33,6 @@
         android:layout_marginBottom="16dp"
         android:background="#3F51B5"
         app:layout_constraintBottom_toTopOf="@+id/cancelButton"
-        app:layout_constraintDimensionRatio="2"
         app:layout_constraintEnd_toEndOf="@+id/titleTextView"
         app:layout_constraintStart_toStartOf="@+id/titleTextView"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView">
@@ -47,7 +46,7 @@
                 android:id="@+id/inputEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#3F51B5"
+                android:background="#03A9F4"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="@string/please_input_your_message"
@@ -79,7 +78,7 @@
         android:id="@+id/cancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#9C27B0"
         android:text="@android:string/cancel"
         android:textColor="@android:color/background_light"

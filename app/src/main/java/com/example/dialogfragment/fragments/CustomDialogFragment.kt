@@ -1,6 +1,10 @@
 package com.example.dialogfragment.fragments
 
 import android.content.Context
+import android.content.res.Configuration
+import android.content.res.Resources
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -34,7 +38,14 @@ class CustomDialogFragment : DialogFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        dialog?.window?.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
+        if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+        {
+            dialog?.window?.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+        }
+        else {
+            dialog?.window?.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
+        }
+
         cancelButton.setOnClickListener {
             Log.d(TAG, "onClick: closing dialog")
             dialog!!.dismiss()

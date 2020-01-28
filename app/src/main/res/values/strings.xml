@@ -6,4 +6,5 @@
     <string name="compose_dial_fragment_title">Compose your message :</string>
     <string name="open_dialog">Open Dialog</string>
     <string name="dialog_fragment_activity">Dialog Fragment Activity</string>
+    <string name="please_input_your_message">Please input your message ...</string>
 </resources>
