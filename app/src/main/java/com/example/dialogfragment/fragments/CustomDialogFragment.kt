@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout.LayoutParams
+import android.view.ViewGroup.LayoutParams
 import androidx.fragment.app.DialogFragment
 import com.example.dialogfragment.R
 import kotlinx.android.synthetic.main.fragment_custom_dialog.*
